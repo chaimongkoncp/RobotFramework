@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20191226 15:22:53.345" generator="Robot 3.1.2 (Python 2.7.15 on win32)">
+<suite source="D:\RobotFramework\openbrowser.robot" id="s1" name="Openbrowser">
+<test id="s1-t1" name="TC04">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>http://advantageonlineshopping.com/#/</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20191226 15:22:53.503" level="INFO">Opening browser 'Chrome' to base url 'http://advantageonlineshopping.com/#/'.</msg>
+<status status="PASS" endtime="20191226 15:23:00.165" starttime="20191226 15:22:53.503"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20191226 15:23:04.402" starttime="20191226 15:23:00.166"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20191226 15:23:14.404" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20191226 15:23:14.404" starttime="20191226 15:23:04.403"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class="rowSection"]//*[@id="miceImg"]</arg>
+</arguments>
+<msg timestamp="20191226 15:23:14.405" level="INFO">Clicking element '//*[@class="rowSection"]//*[@id="miceImg"]'.</msg>
+<status status="PASS" endtime="20191226 15:23:19.469" starttime="20191226 15:23:14.404"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20191226 15:23:29.471" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20191226 15:23:29.471" starttime="20191226 15:23:19.470"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@data-ng-class="{ noPromotedProduct : viewAll }"]</arg>
+</arguments>
+<assign>
+<var>${MICE}</var>
+</assign>
+<msg timestamp="20191226 15:23:29.497" level="INFO">${MICE} = MICE</msg>
+<status status="PASS" endtime="20191226 15:23:29.497" starttime="20191226 15:23:29.471"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${MICE}</arg>
+</arguments>
+<status status="PASS" endtime="20191226 15:23:29.498" starttime="20191226 15:23:29.497"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${MICE}'== 'MICE'</arg>
+<arg>Run Keyword</arg>
+<arg>Log To Console</arg>
+<arg>Step is Pass</arg>
+<arg>ELSE</arg>
+<arg>Log To Console</arg>
+<arg>Step is False</arg>
+</arguments>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Log To Console</arg>
+<arg>Step is Pass</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Step is Pass</arg>
+</arguments>
+<status status="PASS" endtime="20191226 15:23:29.499" starttime="20191226 15:23:29.499"></status>
+</kw>
+<status status="PASS" endtime="20191226 15:23:29.499" starttime="20191226 15:23:29.499"></status>
+</kw>
+<status status="PASS" endtime="20191226 15:23:29.499" starttime="20191226 15:23:29.498"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<status status="FAIL" endtime="20191226 15:23:38.167" starttime="20191226 15:23:29.499"></status>
+</kw>
+<status status="FAIL" endtime="20191226 15:23:38.168" critical="yes" starttime="20191226 15:22:53.502">Execution terminated by signal</status>
+</test>
+<status status="FAIL" endtime="20191226 15:23:38.176" starttime="20191226 15:22:53.346"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Openbrowser" pass="0">Openbrowser</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
